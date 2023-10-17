@@ -1,7 +1,13 @@
 import "./App.css";
+import UserContextProvider from './context/UserContextProvider';
+
 
 function App() {
-  return <h1>Context API with 2 Projects</h1>;
+  return(
+    <UserContextProvider>
+    <h1>Context API with 2 Projects</h1>
+    </UserContextProvider>
+  )
 }
 
 export default App;
