@@ -1,11 +1,20 @@
 import ThemeBtn from "./components/ThemeBtn";
 import Card from "./components/Card";
 import {ThemeProvider} from "./context/ThemeContext"
+import { useEffect, useState } from "react";
 function App() {
 
+  const [themeMode,setThemeMode]=useState("light");
+  const darkTheme=()=>setThemeMode("dark");
+  const lightTheme=()=>setThemeMode("light");
+
+  useEffect(()=>{
+    document.querySelector('html').classList.remove("light","dark")
+    document.querySelector('html').classList.add(themeMode)
+  },[themeMode])
 
   return (
-    <ThemeProvider>
+    <ThemeProvider value={{themeMode,darkTheme,lightTheme}}>
     
     <div className="flex flex-wrap min-h-screen items-center">
       <div className="w-full">
