@@ -1,3 +1,4 @@
 1. Create App.jsx, and 2 components-> Card and ThemeBtn
 2. Create ThemeContext and named export it and create context and pass some default parameters into it 
 3. named export Theme.Provider 
+4. create a hook and return usecontext in that
