@@ -1,0 +1,4 @@
+1. Create UserContext
+2. Create UserContextProvider
+3. Wrap App.js components within UserContextProvider 
+4. Under Login Component, Import the UserContext and using the UseContext Hook try to get the things from the context
